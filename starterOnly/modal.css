@@ -283,7 +283,15 @@ input[data-error]::after {
   opacity: 0;
 }
 .checkbox-input {
-  display: none;
+  /*display: none;*/
+  position: absolute;
+  opacity: 0;
+}
+#checkbox1 {
+  position: absolute;
+  left: 50px;
+  bottom: 115px;
+  z-index: 5;
 }
 .checkbox-input:checked + .checkbox-label .checkbox-icon::after,
 .checkbox-input:checked + .checkbox2-label .checkbox-icon::after {
