@@ -68,11 +68,23 @@ form.addEventListener("submit", (event) => {
   addRadioErrorMessage(listBtnRadio);
   addCheckboxErrorMessage(labelCheckbox1);
   if (validate()) {
+    clearForm();
     closeModal();
     console.log("Form submitted");
     alert("Form submitted");
   }
 });
+
+function clearForm(input) {
+  form.style.display = "none";
+  message.style.display = "flex";
+  message.textContent = "Merci ! Votre réservation a été reçue.";
+  setTimeout(() => {
+    form.style.display = "block";
+    message.style.display = "none";
+    form.reset();
+  }, 5000);
+}
 
 function isCheckedRadios() {
   for (let i = 0; i < listBtnRadio.length; i++) {
