@@ -24,7 +24,7 @@ body {
 
 p {
   margin-bottom: 0;
-  padding: 0.5vw;
+  padding: /*0.5vw*/ 5px 0;
 }
 
 img {
@@ -194,16 +194,18 @@ main {
   position: relative;
   color: #fff;
   padding-top: 10px;
+  bottom: 46px;
 }
 
 .modal-body {
-  padding: 15px 8%;
+  padding: 2px 8%;
   margin: 15px auto;
+  height: 852px;
 }
 
 label {
   font-family: var(--font-default);
-  font-size: 17px;
+  font-size: 14px;
   font-weight: normal;
   display: inline-block;
   margin-bottom: 11px;
@@ -219,7 +221,7 @@ input {
   width: 100%;
   border-radius: 8px;
   font-size: 20px;
-  height: 48px;
+  height: 64px;
 }
 .formData[data-error]::after {
   content: attr(data-error);
@@ -239,12 +241,61 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
+.data-error {
+  content: attr(data-error);
+  font-size: 0.4em;
+  color: #e54858;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  /*text-align: right;*/
+  line-height: 0.3;
+  opacity: 1;
+  transition: 0.3s;
+}
+.formData {
+  height: 117px;
+}
+.list {
+  height: 97px;
+}
+.list > p {
+  position: relative;
+  bottom: 5px;
+  left: 0px;
+}
+
+.list-p > p {
+  margin-bottom: 0;
+}
+/*.list-p {
+  height: 59px;
+}*/
+
+#thanks-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+  height: 852px;
+  position: absolute;
+  bottom: 0px;
+  top: 25px;
+  left: 0px;
+  right: 0px;
+}
+.checkbox2 {
+  position: relative;
+  left: 0px;
+  margin-top: 0px;
+  bottom: 10px;
+}
 input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
-    color: red;
-} */
+  content: attr(data-error);
+  font-size: 0.4em;
+  color: red;
+}
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -346,7 +397,7 @@ input[data-error]::after {
 .btn-signup {
   background: #fe142f;
   display: block;
-  margin: 0 auto;
+  margin: -12px auto;
   border-radius: 7px;
   font-size: 1rem;
   padding: 12px 82px;
