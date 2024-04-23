@@ -558,7 +558,7 @@ footer {
 }
 @media screen and (max-width: 800px) {
   body {
-    width: 414px;
+    max-width: 414px;
     height: 736px;
   }
   .topnav {
@@ -566,14 +566,74 @@ footer {
     justify-content: space-between;
     align-items: center;
   }
-
+  .content {
+    margin: 5% auto;
+    width: 414px;
+    max-width: 414px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+    background: #232323;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    padding-top: 10px;
+    bottom: 0px;
+    /*height: 657px;*/
+  }
+  main {
+    width: 414px;
+    margin: 0;
+  }
+  .list {
+    height: 75px;
+  }
+  .modal-body {
+    height: 800px;
+    width: 414px;
+  }
+  .text-control {
+    height: 50px;
+  }
+  label {
+    font-size: 14px;
+    /*margin-bottom: 0;*/
+  }
+  .text-label {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .checkbox-label {
+    margin-left: 29px;
+  }
+  .formData {
+    height: 98px;
+  }
+  label {
+    margin-bottom: 8px;
+  }
+  .btn-submit {
+    margin: 0 auto;
+  }
   .main-navbar {
+    right: 25px;
+  }
+  #thanks-register {
+    left: -45px;
+    height: 800px;
+    font-size: 22px;
+  }
+  .data-error {
+    width: 368px;
   }
   .header-logo {
     height: 19px;
   }
   .header-logo img {
-    width: 106px;
+    width: 131px;
+    height: 23px;
+    object-fit: unset;
+    padding-right: 0;
   }
   .hero-section {
     display: block;
@@ -619,7 +679,7 @@ footer {
     margin-top: 50px;
     text-align: center;
     position: relative;
-    bottom: 60px;
+    bottom: 25px;
   }
 }
 
